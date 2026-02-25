@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: white;
+    min-height: 100vh;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Add Data Form */
+.add-data-form {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.add-data-form h3 {
+    width: 100%;
+    margin-bottom: 10px;
+    color: #667eea;
+}
+
+.add-data-form input {
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background: #2a2a2a;
+    color: white;
+    flex: 1;
+    min-width: 120px;
+}
+
+.add-data-form button {
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.add-data-form button:hover {
+    background: #45a049;
+}
+
+.add-data-form .refresh-btn {
+    background: #2196F3;
+}
+
+.add-data-form .refresh-btn:hover {
+    background: #1976D2;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter-buttons button {
+    padding: 12px 24px;
+    border: 2px solid #667eea;
+    background: transparent;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.filter-buttons button.active {
+    background: #667eea;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: #1f1f1f;
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+.card h3 {
+    color: #aaa;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Chart */
+.chart-container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    height: 400px;
+}
+
+@media(max-width: 900px) {
+    .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media(max-width: 500px) {
+    .cards { grid-template-columns: 1fr; }
+    .add-data-form input { width: 100%; }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CreatorInsight Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>CreatorInsight - Social Media Analytics</h1>
+
+    <!-- ADD DATA FORM -->
+    <div class="add-data-form">
+        <h3>Add New Data</h3>
+        <input type="date" id="newDate" required>
+        <input type="number" id="newFollowers" placeholder="Followers" required>
+        <input type="number" id="newLikes" placeholder="Likes" required>
+        <input type="number" id="newComments" placeholder="Comments" required>
+        <button onclick="addData()">Add Data</button>
+        <button onclick="loadData()" class="refresh-btn">🔄 Refresh</button>
+    </div>
+
+    <div class="filter-buttons">
+        <button onclick="filterData('weekly')" id="btn-weekly">Weekly</button>
+        <button onclick="filterData('monthly')" id="btn-monthly">Monthly</button>
+        <button onclick="filterData('all')" id="btn-all" class="active">All Time</button>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Followers</h3>
+            <p id="followers">0</p>
+        </div>
+        <div class="card">
+            <h3>Likes</h3>
+            <p id="likes">0</p>
+        </div>
+        <div class="card">
+            <h3>Comments</h3>
+            <p id="comments">0</p>
+        </div>
+        <div class="card">
+            <h3>Engagement Rate</h3>
+            <p id="engagement">0%</p>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="analyticsChart"></canvas>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

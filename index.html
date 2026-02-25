@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CreatorInsight Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>CreatorInsight - Social Media Analytics</h1>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Followers</h3>
+            <p id="followers">0</p>
+        </div>
+        <div class="card">
+            <h3>Likes</h3>
+            <p id="likes">0</p>
+        </div>
+        <div class="card">
+            <h3>Comments</h3>
+            <p id="comments">0</p>
+        </div>
+        <div class="card">
+            <h3>Engagement Rate</h3>
+            <p id="engagement">0%</p>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="analyticsChart"></canvas>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
